@@ -56,7 +56,7 @@ export default class FacebookLogin extends Component {
 
   render() {
     const {
-      socialId, xfbml, cookie, version, language, fields, responseHandler,
+      socialId, xfbml, cookie, version, language, fields, responseHandler, clickHandler,
       children, buttonText, ...props
     } = this.props;
 

@@ -160,6 +160,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'clickHandler',
 	    value: function clickHandler() {
+	      if (this.props.clickHandler) {
+	        this.props.clickHandler();
+	      }
+
 	      FB.login(this.checkLoginState, { scope: this.props.scope });
 	    }
 	  }, {
@@ -173,9 +177,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	          language = _props.language,
 	          fields = _props.fields,
 	          responseHandler = _props.responseHandler,
+	          clickHandler = _props.clickHandler,
 	          children = _props.children,
 	          buttonText = _props.buttonText,
-	          props = _objectWithoutProperties(_props, ['socialId', 'xfbml', 'cookie', 'version', 'language', 'fields', 'responseHandler', 'children', 'buttonText']);
+	          props = _objectWithoutProperties(_props, ['socialId', 'xfbml', 'cookie', 'version', 'language', 'fields', 'responseHandler', 'clickHandler', 'children', 'buttonText']);
 
 	      return _react2.default.createElement(
 	        'button',
