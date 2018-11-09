@@ -47,6 +47,10 @@ export default class FacebookLogin extends Component {
   };
 
   clickHandler () {
+    if (this.props.clickHandler) {
+      this.props.clickHandler();
+    }
+
     FB.login(this.checkLoginState, { scope: this.props.scope });
   };
 
